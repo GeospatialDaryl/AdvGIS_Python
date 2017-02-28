@@ -1,7 +1,7 @@
 #HSLIDE
 <!-- .slide: data-autoslide="10000" -->
 
-![LOGO](http://www.cakex.org/sites/default/files/National_Conservation_Training_Center.gif =100px)
+![LOGO](http://www.cakex.org/sites/default/files/National_Conservation_Training_Center.gif =100x)
 
 #### Python for Advanced GIS
 <br>
