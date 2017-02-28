@@ -2,7 +2,12 @@
 <!-- .slide: data-autoslide="10000" -->
 
 ![LOGO](http://www.cakex.org/sites/default/files/National_Conservation_Training_Center.gif =100x)
-
+#[LOGO]: (picurl)
+<style type="text/css">
+    .wideImg{
+        width: 100px;
+    }
+</style>
 #### Python for Advanced GIS
 <br>
 <span style="color:gray">Markdown Presentations For Developers</span>
