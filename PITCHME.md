@@ -1,9 +1,9 @@
 #HSLIDE
 <!-- .slide: data-autoslide="10000" -->
 
-![LOGO](https://d1z75bzl1vljy2.cloudfront.net/img/gp-logo.png)
+![LOGO](http://www.cakex.org/sites/default/files/National_Conservation_Training_Center.gif)
 
-#### Get the word out
+#### Python for Advanced GIS
 <br>
 <span style="color:gray">Markdown Presentations For Developers</span>
 <br>
@@ -87,4 +87,3 @@ Instantly use your GitPitch slideshow URL to promote, pitch or present absolutel
 
 ### Go for it.
 ### Just add <span style="color: #e49436; text-transform: none">PITCHME.md</span> ;)
-
