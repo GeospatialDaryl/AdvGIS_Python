@@ -61,8 +61,29 @@ Using the string concatenation operator (*+*) on this example will throw a run-t
 You need to explicity convert the type for this to work.  ( *str(valTemp)* )   
 
 #HSLIDE
+## Statements
+### Assignment *=*
 
-###
+- Assignment (token '=', the equals sign). This operates differently than in traditional imperative programming languages, and this fundamental mechanism (including the nature of Python's version of variables) illuminates many other features of the language. Assignment in C, e.g., x = 2, translates to "typed variable name x receives a copy of numeric value 2". The (right-hand) value is copied into an allocated storage location for which the (left-hand) variable name is the symbolic address. The memory allocated to the variable is large enough (potentially quite large) for the declared type. In the simplest case of Python assignment, using the same example, x = 2, translates to "(generic) name x receives a reference to a separate, dynamically allocated object of numeric (int) type of value 2." This is termed binding the name to the object. Since the name's storage location doesn't contain the indicated value, it is improper to call it a variable. Names may be subsequently rebound at any time to objects of greatly varying types, including strings, procedures, complex objects with data and methods, etc. Successive assignments of a common value to multiple names, e.g., x = 2; y = 2; z = 2 result in allocating storage to (at most) three names and one numeric object, to which all three names are bound. Since a name is a generic reference holder it is unreasonable to associate a fixed data type with it. However at a given time a name will be bound to some object, which will have a type; thus there is dynamic typing.
+#HSLIDE
+## Statements
+### Flow Control
+- The if statement, which conditionally executes a block of code, along with else and elif (a contraction of else-if).
+- The for statement, which iterates over an iterable object, capturing each element to a local variable for use by the attached block.
+- The while statement, which executes a block of code as long as its condition is true.
+- The try statement, which allows exceptions raised in its attached code block to be caught and handled by except clauses; it also ensures that clean-up code in a finally block will always be run regardless of how the block exits.
+- The with statement (from Python 2.5), which encloses a code block within a context manager (for example, acquiring a lock before the block of code is run and releasing the lock afterwards, or opening a file and then closing it), allowing Resource Acquisition Is Initialization (RAII)-like behavior.
+ The pass statement, which serves as a NOP. It is syntactically needed to create an empty code block.
+
+#HSLIDE
+## Statements
+### Program Constructs
+- The class statement, which executes a block of code and attaches its local namespace to a class, for use in object-oriented programming.
+- The def statement, which defines a function or method.
+- The assert statement, used during debugging to check for conditions that ought to apply.
+- The yield statement, which returns a value from a generator function. From Python 2.5, yield is also an operator. This form is used to implement coroutines.
+- The import statement, which is used to import modules whose functions or variables can be used in the current program.
+- The print statement was changed to the print() function in Python 3.[54]
 
 ### GitPitch turns <span style="color: #e49436; text-transform: none">PITCHME.md</span> into interactive, online slideshows.
 <br>
