@@ -1,8 +1,9 @@
 #HSLIDE
 <!-- .slide: data-autoslide="10000" -->
 
-![LOGO]()
-<img src="http://www.cakex.org/sites/default/files/National_Conservation_Training_Center.gif" width="48">
+
+<img src="http://www.cakex.org/sites/default/files/National_Conservation_Training_Center.gif" width="100">
+<img src="https://www.python.org/static/img/python-logo.png" width="100">
 
 #### Python for Advanced GIS
 <br>
@@ -20,6 +21,75 @@
 - Uses the virtual machine model
 The basic idea is that we have a python *process*, which sits and waits for instructions (aka a virtual machine).
 
+#HSLIDE
+## What is Python?
+
+HelloWorld.py
+```python
+print "Hello World!"
+print "Hello Again"
+print "I like typing this."
+print "This is fun."
+print 'Yay! Printing.'
+print "I'd much rather you 'not'."
+print 'I "said" do not touch this.'
+```
+
+#HSLIDE
+## What is Python?
+
+HelloWorld.py
+```python
+#!/usr/bin/python
+# That was a shebang (or hashbang) - it tells a \*nix system what binary
+#  to use to run the script.  Windows will ignore it.
+#  This is a comment.  Use them, alot.
+#  They *must* have a hash sign in column 1.
+def helloWorld():
+     #  comments make other programmers take you seriously
+     print "Hello World!"
+     print "Hello Again"
+     print "I like typing this."
+
+#  The function block ends by closing out of the indent (4 spaces).
+#  That makes this the first line of code that actually does something
+#      active, other than just define the function object in the compiler.
+helloWorld()
+```
+So what happened?
+
+#HSLIDE
+### What is Python?
+1. Interpreter starts reading through the program.
+2. Interpreter sees the <code>def</code> keyword - this means that the next line will standardize indent size for this code block.
+3. So it keeps reading until it gets to the bottom of the code block (indents back).
+4. At that point, it compiles an object (everything is an object) that is a function.
+5. It then continues along until it gets to the call to that function, on the first column.
+6. The call matches the object name, so any arguments in the parenthesis are passed to the object.
+7. The function is evaluated with the input data, if any.
+8. Anything returned by the function (with the <code>return</code> keyword) is handed back to the calling block.
+9. If there is an assignement, e.g. <code>output = thisFunction(input)</code>, the LHS variable is mapped to the object in memory.
+10. Otherwise, if there is no assignement, anything returned goes to standard out.
+
+#HSLIDE
+## What is Python?
+
+HelloWorld_v1.py
+```python
+#!/usr/bin/python
+# Let's do a better version
+def helloWorld(inputText):
+     #  comments make other programmers take you seriously
+     print "Hello World!"
+     print "Hello Again"
+     print "I like typing this."
+     print inputText
+     return "I printed "+inputText+" just like you asked!"
+#  so what happens with these?
+helloWorld()
+output = helloWorld("you do you...")
+output = helloWorld(1+1)  # equivalent to helloWorld(1L+1L)
+```
 #HSLIDE
 ### Major Language Elements
 //<span style="color: #e49436; text-transform: none">PITCHME.md</span> into interactive, online slideshows.
