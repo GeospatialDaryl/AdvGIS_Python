@@ -20,7 +20,8 @@
 The basic idea is that we have a python *process*, which sits and waits for instructions (aka a virtual machine).  
 
 #HSLIDE
-### Major Language Elements<span style="color: #e49436; text-transform: none">PITCHME.md</span> into interactive, online slideshows.
+### Major Language Elements
+//<span style="color: #e49436; text-transform: none">PITCHME.md</span> into interactive, online slideshows.
 
 - Hello, World!
 - Variables and Types
@@ -28,6 +29,10 @@ The basic idea is that we have a python *process*, which sits and waits for inst
 - Basic Operators
 - String Formatting
 - Basic String Operations
+- Dictionaries, sets, and iterables
+
+#HSLIDE
+### Flow Control
 - Conditions
 - Loops
 - Functions
