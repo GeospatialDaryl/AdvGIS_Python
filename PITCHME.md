@@ -37,6 +37,27 @@ The basic idea is that we have a python *process*, which sits and waits for inst
 
 #HSLIDE
 
+### Typing
+- Duck Typing
+- Dynamic Typing
+- Strongly typed
+Smalltalk, Perl, Ruby, Python, and Self are all "strongly typed" in the sense that typing errors are prevented at runtime and they do little implicit type conversion, but these languages make no use of static type checking: the compiler does not check or enforce type constraint rules.
+
+The term duck typing is now used to describe the dynamic typing paradigm used by the languages in this group. (wikipedia)
+
+#HSLIDE
+
+### Typing
+So what does this mean?  Python very much cares that the type of the object matches the requirements of the function/method.
+
+- String concatenation:
+We want to append the value of the field to an intro string ("The temperature is :" *valTemp*).
+Using the string concatenation operator (*+*) on this example will throw a run-time error.
+You need to explicity convert the type for this to work.  ( *str(valTemp)* )   
+
+#HSLIDE
+
+###
 
 ### GitPitch turns <span style="color: #e49436; text-transform: none">PITCHME.md</span> into interactive, online slideshows.
 <br>
