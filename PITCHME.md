@@ -1,7 +1,8 @@
 #HSLIDE
 <!-- .slide: data-autoslide="10000" -->
 
-![LOGO](http://www.cakex.org/sites/default/files/National_Conservation_Training_Center.gif)
+![LOGO]()
+<img src="http://www.cakex.org/sites/default/files/National_Conservation_Training_Center.gif" width="48">
 
 #### Python for Advanced GIS
 <br>
@@ -17,7 +18,7 @@
 
 - Interpreted language (JIT compilation)
 - Uses the virtual machine model
-The basic idea is that we have a python *process*, which sits and waits for instructions (aka a virtual machine).  
+The basic idea is that we have a python *process*, which sits and waits for instructions (aka a virtual machine).
 
 #HSLIDE
 ### Major Language Elements
@@ -58,7 +59,7 @@ So what does this mean?  Python very much cares that the type of the object matc
 - String concatenation:
 We want to append the value of the field to an intro string ("The temperature is :" *valTemp*).
 Using the string concatenation operator (*+*) on this example will throw a run-time error.
-You need to explicity convert the type for this to work.  ( *str(valTemp)* )   
+You need to explicity convert the type for this to work.  ( *str(valTemp)* )
 
 #HSLIDE
 ## Statements
@@ -98,6 +99,24 @@ You need to explicity convert the type for this to work.  ( *str(valTemp)* )
 ### <span class="fragment" data-fragment-index="2" data-autoslide="3500">Just <span style="color: #e49436">Markdown</span>. Then <span style="color: #e49436">Git-Commit</span>.</li>
 
 #HSLIDE
+### ArcPy is not vanilla python...
+In addition to the esri help which describes all of the parameters of a function and how to access them from Python you can also get Python syntax (the structure of the language) for a tool like this :
+
+1. Run the tool interactively (e.g. buffer) with your input data, output data and any other relevant parameters (e.g. distance to buffer)
+
+2. Go to the Geoprocessing -> Results window and right click the completed tool run.
+
+3. Pick "Copy Python Snippet"
+
+4. Paste the code into PythonWin or the Python code window to see how you would code the same operation you just ran in Desktop in Python.
+
+#HSLIDE
+### ArcPy is not vanilla python...
+
+
+#HSLIDE
+### ArcPy is not vanilla python...
+
 
 <span style="color: #e49436">STEP 1. PITCHME.md</span>
 
