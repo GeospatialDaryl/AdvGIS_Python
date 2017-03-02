@@ -13,6 +13,31 @@
 
 #HSLIDE
 
+## What is Python?
+
+- Interpreted language (JIT compilation)
+- Uses the virtual machine model
+The basic idea is that we have a python *process*, which sits and waits for instructions (aka a virtual machine).  
+
+#HSLIDE
+### Major Language Elements<span style="color: #e49436; text-transform: none">PITCHME.md</span> into interactive, online slideshows.
+
+- Hello, World!
+- Variables and Types
+- Lists
+- Basic Operators
+- String Formatting
+- Basic String Operations
+- Conditions
+- Loops
+- Functions
+- Classes and Objects
+- Dictionaries
+- Modules and Packages
+
+#HSLIDE
+
+
 ### GitPitch turns <span style="color: #e49436; text-transform: none">PITCHME.md</span> into interactive, online slideshows.
 <br>
 <span style="color:gray; font-size:0.6em;">[ JUST LIKE THIS ONE ]</span>
