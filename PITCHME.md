@@ -34,14 +34,14 @@ print 'I "said" do not touch this.'
 ```
 
 #HSLIDE
-## What is Python?
-
-HelloWorld.py
+## A Simple Program
 ```python
 #!/usr/bin/python
-# That was a shebang (or hashbang) - it tells a \*nix system what binary
-#  to use to run the script.  Windows will ignore it.
+# That was a shebang (or hashbang) - it tells a \*nix system
+#  what program to use to run the script.
+#  Windows will ignore it.
 #  This is a comment.  Use them, alot.
+#  Tell yourself what you are doing, and why
 #  They *must* have a hash sign in column 1.
 def helloWorld():
      #  comments make other programmers take you seriously
@@ -53,7 +53,6 @@ def helloWorld():
 #      active, other than just define the function object in the compiler.
 helloWorld()
 ```
-So what happened?
 
 #HSLIDE
 ### What is evaluation?
