@@ -48,12 +48,43 @@ def helloWorld():
      print "Hello World!"
      print "Hello Again"
      print "I like typing this."
+
+helloWorld()
+```
+#HSLIDE
+## A Simple Program
+```python
+#!/usr/bin/python
+def helloWorld():
+    """
+    This is a docstring.  They all have three
+    quotes at beginning and end.  They show up magically
+    in in-line help (the text that pops up.)
+    """
+     #  comments make other programmers take you seriously
+     print "Hello World!"
+     print "Hello Again"
+     print "I like typing this."
+
+helloWorld()
+```
+#HSLIDE
+## A Simple Program
+```python
+#!/usr/bin/python
+def helloWorld():
+    """ Function helloWorld()
+    inputs:   <>
+    returns:  <>   """
+     #  dood, refactor this later for realz.  2016/01/30
+     print "Hello World!"
+     print "Hello Again"
+     print "I like typing this."
 #  The function block ends by closing out of the indent (4 spaces).
 #  That makes this the first line of code that actually does something
 #      active, other than just define the function object in the compiler.
 helloWorld()
 ```
-
 #HSLIDE
 ### What is evaluation?
 1. Interpreter starts reading through the program.
