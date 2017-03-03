@@ -2,8 +2,8 @@
 <!-- .slide: data-autoslide="10000" -->
 
 
-<img src="http://www.cakex.org/sites/default/files/National_Conservation_Training_Center.gif" width="100">
-<img src="https://www.python.org/static/img/python-logo.png" width="100">
+<img src="http://www.cakex.org/sites/default/files/National_Conservation_Training_Center.gif" width="200">
+<img src="https://www.python.org/static/img/python-logo.png" width="400">
 
 #### Python for Advanced GIS
 <br>
@@ -19,7 +19,7 @@
 
 - Interpreted language (JIT compilation)
 - Uses the virtual machine model
-The basic idea is that we have a python *process*, which sits and waits for instructions (aka a virtual machine).
+The basic idea is that we have a python *process*, which sits and waits for instructions/compiled binary code (aka a virtual machine).
 
 #HSLIDE
 ## What is Python?
@@ -29,8 +29,6 @@ HelloWorld.py
 print "Hello World!"
 print "Hello Again"
 print "I like typing this."
-print "This is fun."
-print 'Yay! Printing.'
 print "I'd much rather you 'not'."
 print 'I "said" do not touch this.'
 ```
@@ -50,7 +48,6 @@ def helloWorld():
      print "Hello World!"
      print "Hello Again"
      print "I like typing this."
-
 #  The function block ends by closing out of the indent (4 spaces).
 #  That makes this the first line of code that actually does something
 #      active, other than just define the function object in the compiler.
@@ -59,16 +56,20 @@ helloWorld()
 So what happened?
 
 #HSLIDE
-### What is Python?
+### What is evaluation?
 1. Interpreter starts reading through the program.
-2. Interpreter sees the <code>def</code> keyword - this means that the next line will standardize indent size for this code block.
+2. Interpreter sees the `def` keyword - this means that the next line will standardize indent size for this code block.
 3. So it keeps reading until it gets to the bottom of the code block (indents back).
 4. At that point, it compiles an object (everything is an object) that is a function.
+#HSLIDE
+### What is evaluation?
 5. It then continues along until it gets to the call to that function, on the first column.
 6. The call matches the object name, so any arguments in the parenthesis are passed to the object.
 7. The function is evaluated with the input data, if any.
-8. Anything returned by the function (with the <code>return</code> keyword) is handed back to the calling block.
-9. If there is an assignement, e.g. <code>output = thisFunction(input)</code>, the LHS variable is mapped to the object in memory.
+#HSLIDE
+### What is evaluation?
+8. Anything returned by the function (with the `return` keyword) is handed back to the calling block.
+9. If there is an assignement, e.g. `output = thisFunction(input)`, the LHS variable is mapped to the object in memory.
 10. Otherwise, if there is no assignement, anything returned goes to standard out.
 
 #HSLIDE
@@ -112,7 +113,6 @@ output = helloWorld(1+1)  # equivalent to helloWorld(1L+1L)
 - Modules and Packages
 
 #HSLIDE
-
 ### Typing
 - Duck Typing
 - Dynamic Typing
@@ -122,20 +122,39 @@ Smalltalk, Perl, Ruby, Python, and Self are all "strongly typed" in the sense th
 The term duck typing is now used to describe the dynamic typing paradigm used by the languages in this group. (wikipedia)
 
 #HSLIDE
-
 ### Typing
 So what does this mean?  Python very much cares that the type of the object matches the requirements of the function/method.
 
 - String concatenation:
-We want to append the value of the field to an intro string ("The temperature is :" *valTemp*).
-Using the string concatenation operator (*+*) on this example will throw a run-time error.
-You need to explicity convert the type for this to work.  ( *str(valTemp)* )
+We want to append the value of the field to an intro string (`"The temperature is :"` and `*valTemp*`).
+Using the string concatenation operator (`+`) on this example will throw a run-time error.
+You need to explicity convert the type for this to work.  ( `str(valTemp)` )
 
 #HSLIDE
 ## Statements
 ### Assignment *=*
+- We recall:
+1.  All python things are objects.
+2.  All objects have classes - that is, **they are an instance of a class.**
+- Python has two fundamental flavors of objects.  Mutable and immutable.
+- Mutable objects can be changed in place, immutable cannot.
+- When we 'change' immutable objects, we are really re-building that object and transferring the symbol name to that object.
+<img src="https://i.stack.imgur.com/M3iZD.png">
 
-- Assignment (token '=', the equals sign). This operates differently than in traditional imperative programming languages, and this fundamental mechanism (including the nature of Python's version of variables) illuminates many other features of the language. Assignment in C, e.g., x = 2, translates to "typed variable name x receives a copy of numeric value 2". The (right-hand) value is copied into an allocated storage location for which the (left-hand) variable name is the symbolic address. The memory allocated to the variable is large enough (potentially quite large) for the declared type. In the simplest case of Python assignment, using the same example, x = 2, translates to "(generic) name x receives a reference to a separate, dynamically allocated object of numeric (int) type of value 2." This is termed binding the name to the object. Since the name's storage location doesn't contain the indicated value, it is improper to call it a variable. Names may be subsequently rebound at any time to objects of greatly varying types, including strings, procedures, complex objects with data and methods, etc. Successive assignments of a common value to multiple names, e.g., x = 2; y = 2; z = 2 result in allocating storage to (at most) three names and one numeric object, to which all three names are bound. Since a name is a generic reference holder it is unreasonable to associate a fixed data type with it. However at a given time a name will be bound to some object, which will have a type; thus there is dynamic typing.
+
+- Assignment (token `=`, the equals sign).
+- Different than other C-style languages (C, Java, C++, etc).
+- Assignment in C, e.g., `x = 2`, translates to "typed variable name x receives a copy of numeric value 2".  The memory for this element (determined by data type and width) is allocated, the data are copied over, and the *variable name* is an alias or symbolic address for that memory location.  Therefore, pointers, addresses, referencing, de-referencing, and pointer arithmetic.
+
+#HSLIDE
+## Statements
+### Assignment *=* ... in Python
+- `x = 2` - *in Python* - means:
+"(generic) name x receives a reference to a separate, dynamically allocated object of numeric (int) type of value 2."
+<img src="http://archive.oreilly.com/oreillyschool/courses/Python1/images/lessons/ModuleVsObjectSpace.jpg">
+This is termed binding the name to the object.
+
+ Since the name's storage location doesn't contain the indicated value, it is improper to call it a variable. Names may be subsequently rebound at any time to objects of greatly varying types, including strings, procedures, complex objects with data and methods, etc. Successive assignments of a common value to multiple names, e.g., x = 2; y = 2; z = 2 result in allocating storage to (at most) three names and one numeric object, to which all three names are bound. Since a name is a generic reference holder it is unreasonable to associate a fixed data type with it. However at a given time a name will be bound to some object, which will have a type; thus there is dynamic typing.
 #HSLIDE
 ## Statements
 ### Flow Control
