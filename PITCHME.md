@@ -180,6 +180,82 @@ This is termed binding the name to the object.
 <span style="color:gray; font-size:0.6em;">[ JUST LIKE THIS ONE ]</span>
 
 #HSLIDE
+## Scope
+Scope is the technical term for how variables are visible in a programming language.  It's critical we have a clear understanding of how & why this works, so we can:
+- predict how our code should work,
+- and debug it when it doesn't.
+
+#HSLIDE
+## Scope
+Python has
+1. function scope,
+2. module scope, and
+3. global scope.
+
+#HSLIDE
+## Scope - when we 'create a variable'
+Names enter scope at the start of a context (function, module, or globally),
+and exit scope when a non-nested function is called or the context ends.
+If a name is used prior to variable initialization, this raises a runtime exception.
+
+#HSLIDE
+## Scope - when we 'call a variable'
+ If a variable is simply accessed (not assigned to) in a context, name resolution follows the LEGB rule:
+ 1. Local,
+ 2. Enclosing,
+ 3. Global,
+ 4. Built-in.
+
+However, if a variable is assigned to, it defaults to creating a local variable, which is in scope for the entire context. Both these rules can be overridden with a global or nonlocal (in Python 3) declaration prior to use, which allows accessing global variables even if there is an intervening nonlocal variable, and assigning to global or nonlocal variables.
+
+#HSLIDE
+## Scope - forward refernce ok
+As a simple example, a function resolves a variable to the global scope:
+```python
+>>> def f():
+...     print(x)
+...
+>>> x = 'global'
+>>> f()
+global
+```
+We have initialized `x` before assigning a value.  As long as Python can resolve the symbol (how?) before execution, it's ok.
+
+#HSLIDE
+## Scope - it can be tricky
+```python
+>>> def f():
+...     x = 'f'
+...     print(x)
+...
+>>> x = 'global'
+>>> print(x)
+global
+>>> f()
+f
+>>> print(x)
+global
+```
+#HSLIDE
+## Scope - What about now?
+```python
+>>> def f():
+...     print(x)
+...     x = 'f'
+...
+>>> x = 'global'
+>>> f()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 2, in f
+UnboundLocalError: local variable 'x' referenced before assignment
+```
+#HSLIDE
+## Scope - Contrast with R
+R has a lexical scope system - but is more tightly controlled than Python.
+
+
+#HSLIDE
 <!-- .slide: data-autoslide="2000" -->
 
 ### No more <span style="color: #666666">Keynote.</span>
