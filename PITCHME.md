@@ -252,7 +252,84 @@ UnboundLocalError: local variable 'x' referenced before assignment
 ```
 #HSLIDE
 ## Scope - Contrast with R
-R has a lexical scope system - but is more tightly controlled than Python.
+```r
+> a=1
+> b=2
+> f<-function(x)
++ {
++     a*x + b
++ }
+> g<-function(x)
++ {
++     a=2
++     b=1
++     f(x)
++ }
+```
+#HSLIDE
+## Scope - Contrast with R
+```r
+> a=1
+> b=2
+> f<-function(x)
++ {
++     a*x + b
++ }
+> g<-function(x)
++ {
++     a=2
++     b=1
++     f(x)
++ }
+> g(2)
+[1] 4
+>
+```
+
+#HSLIDE
+## Scope - Same in Python
+```python
+>>> a = 1
+>>> b = 2
+>>> def f(x):
+	return a*x + b
+
+>>> def g(x):
+	a = 2
+	b = 1
+	f(x)
+
+>>> g(2)
+>>> def g(x):
+	a = 2
+	b = 1
+	print f(x)
+```
+Answer?
+
+#HSLIDE
+## Scope - Same in Python
+```python
+>>> a = 1
+>>> b = 2
+>>> def f(x):
+	return a*x + b
+
+>>> def g(x):
+	a = 2
+	b = 1
+	f(x)
+
+>>> g(2)
+>>> def g(x):
+	a = 2
+	b = 1
+	print f(x)
+>>> g(2)
+4
+>>>
+```
+
 
 
 #HSLIDE
