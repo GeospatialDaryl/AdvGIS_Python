@@ -7,12 +7,9 @@
 
 #### Python for Advanced GIS
 <br>
-<span style="color:gray">Markdown Presentations For Developers</span>
+<span style="color:gray">NCTC Advanced GIS</span>
 <br>
-<span style="color:gray">on</span>
-<br>
-<span style="color:gray">GitHub, GitLab and Bitbucket</span>
-
+<span style="color:gray">Daryl Van Dyke</span>
 #HSLIDE
 ## Major Language Elements
 //<span style="color: #e49436; text-transform: none">PITCHME.md</span> into interactive, online slideshows.
@@ -176,7 +173,6 @@ output = helloWorld(1+1)  # equivalent to helloWorld(1L+1L)
 
 #HSLIDE
 ## Major Language Elements
-//<span style="color: #e49436; text-transform: none">PITCHME.md</span> into interactive, online slideshows.
 
 - Hello, World!
 - Variables and Types
