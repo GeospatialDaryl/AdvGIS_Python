@@ -10,10 +10,9 @@
 <span style="color:gray">NCTC Advanced GIS</span>
 <br>
 <span style="color:gray">Daryl Van Dyke</span>
+
 #HSLIDE
 ## Major Language Elements
-//<span style="color: #e49436; text-transform: none">PITCHME.md</span> into interactive, online slideshows.
-
 - Hello, World!
 - Variables and Types
 - Lists
@@ -187,22 +186,32 @@ output = helloWorld(1+1)  # equivalent to helloWorld(1L+1L)
 - Duck Typing
 - Dynamic Typing
 - Strongly typed
-Smalltalk, Perl, Ruby, Python, and Self are all "strongly typed" in the sense that typing errors are prevented at runtime and they do little implicit type conversion, but these languages make no use of static type checking: the compiler does not check or enforce type constraint rules.
 
-The term duck typing is now used to describe the dynamic typing paradigm used by the languages in this group. (wikipedia)
+Python is "strongly typed" = it does not do implicit type conversion.
+Type error = Crash (an Exception)
+
+This is not "static typing" - we can change the type of a variable by re-referencing it, and the compiler doesn not check ahead of time.
+
+The term 'duck typing' is now used to describe the dynamic typing paradigm used by the languages in this group. (wikipedia)
 
 #HSLIDE
 ### Typing
 So what does this mean?  Python very much cares that the type of the object matches the requirements of the function/method.
 
 - String concatenation:
-We want to append the value of the field to an intro string (`"The temperature is :"` and `*valTemp*`).
-Using the string concatenation operator (`+`) on this example will throw a run-time error.
+We want to append the value of the field to an intro string (```"The temperature is :"``` and ```valTemp```).
+Using the string concatenation operator (```+```) on this example will throw a run-time error.
 You need to explicity convert the type for this to work.  ( `str(valTemp)` )
 
 #HSLIDE
+### Typing
+Confession:
+Failing to explicity handle type conversion is my most common 1st run error.
+Especially as you move between languages frequently.
+
+#HSLIDE
 ## Statements
-### Assignment *=*
+### Assignment ```=```
 - We recall:
 1.  All python things are objects.
 2.  All objects have classes - that is, **they are an instance of a class.**
@@ -219,18 +228,99 @@ You need to explicity convert the type for this to work.  ( `str(valTemp)` )
 #HSLIDE
 ## Statements
 ### Assignment *=* ... in Python
-- `x = 2` - *in Python* - means:
+- ```x = 2``` - *in Python* - means:
 "(generic) name x receives a reference to a separate, dynamically allocated object of numeric (int) type of value 2."
 <img src="http://archive.oreilly.com/oreillyschool/courses/Python1/images/lessons/ModuleVsObjectSpace.jpg">
-This is termed binding the name to the object.
+***This is termed binding the name to the object.***
 
- Since the name's storage location doesn't contain the indicated value, it is improper to call it a variable. Names may be subsequently rebound at any time to objects of greatly varying types, including strings, procedures, complex objects with data and methods, etc. Successive assignments of a common value to multiple names, e.g., x = 2; y = 2; z = 2 result in allocating storage to (at most) three names and one numeric object, to which all three names are bound. Since a name is a generic reference holder it is unreasonable to associate a fixed data type with it. However at a given time a name will be bound to some object, which will have a type; thus there is dynamic typing.
+#HSLIDE
+### Assignment
+ To be technical - they aren't variables.  They are names bound to objects.
+
+ Names may be subsequently rebound at any time to objects of greatly varying types...
+ -strings,
+ -procedures,
+ -complex objects with data and methods, etc.
+
+#HSLIDE
+### Assignment
+OK - what happens?
+
+```x = 2; y = 2; z = 2```
+
+#HSLIDE
+### Assignment
+```x = 2; y = 2; z = 2```
+three names and one numeric object,
+to which all three names are bound.
+
+#HSLIDE
+### Assignement
+Since a name is a generic reference holder it is unreasonable to associate a fixed data type with it.
+However at a given time a name will be bound to some object, which will have a type;
+***thus there is dynamic typing.***
+
+#HSLIDE
+### Assignment
+Since it is just a name, pick a good one.  While you can do all of the above, why not?
+Well, there are very good (and very advanced) reasons to do this... object polymorphism, for one.
+Class inheritance and class hierarchies, another.
+
+#HSLIDE
+### Assignment - Read PEP-8
+Python Enhancement Proposals are how the Python community suggests, and vets, language enhancements.
+I read PEP-8 probably every 3 or 4 years, and now I find my code looks *pretty much like professional Python code*...
+but I should do more comments.
+
+#HSLIDE
+### Assignment - PEP-8
+YES:
+```python
+# Aligned with opening delimiter.
+foo = long_function_name(var_one, var_two,
+                         var_three, var_four)
+```
+#HSLIDE
+### Assignment - PEP-8
+```python
+# More indentation included to distinguish this from the rest.
+def long_function_name(
+        var_one, var_two, var_three,
+        var_four):
+    print(var_one)
+```
+
+#HSLIDE
+### Style - PEP-8
+```python
+# Yes: easy to match operators with operands
+income = (gross_wages
+          + taxable_interest
+          + (dividends - qualified_dividends)
+          - ira_deduction
+          - student_loan_interest)
+```
+
+#HSLIDE
+### Style - PEP-8
+I like to use 'variable names' like this in my code:
+*type*Name
+```listFC```
+```intNumFeat``
+```boolTestLoop``
+```objLASFile```
+etc...
+This convention ***does nothing real** - but I find it very helpful.
+
+
 #HSLIDE
 ## Statements
-### Flow Control
+### Flow Control p. 1
 - The if statement, which conditionally executes a block of code, along with else and elif (a contraction of else-if).
 - The for statement, which iterates over an iterable object, capturing each element to a local variable for use by the attached block.
 - The while statement, which executes a block of code as long as its condition is true.
+## Statements
+### Flow Control p. 2
 - The try statement, which allows exceptions raised in its attached code block to be caught and handled by except clauses; it also ensures that clean-up code in a finally block will always be run regardless of how the block exits.
 - The with statement (from Python 2.5), which encloses a code block within a context manager (for example, acquiring a lock before the block of code is run and releasing the lock afterwards, or opening a file and then closing it), allowing Resource Acquisition Is Initialization (RAII)-like behavior.
  The pass statement, which serves as a NOP. It is syntactically needed to create an empty code block.
@@ -238,12 +328,16 @@ This is termed binding the name to the object.
 #HSLIDE
 ## Statements
 ### Program Constructs
-- The class statement, which executes a block of code and attaches its local namespace to a class, for use in object-oriented programming.
-- The def statement, which defines a function or method.
-- The assert statement, used during debugging to check for conditions that ought to apply.
-- The yield statement, which returns a value from a generator function. From Python 2.5, yield is also an operator. This form is used to implement coroutines.
-- The import statement, which is used to import modules whose functions or variables can be used in the current program.
-- The print statement was changed to the print() function in Python 3.[54]
+- The ```class``` statement, which executes a block of code and attaches its local namespace to a class, for use in object-oriented programming.
+- The ```def``` statement, which defines a function or method.
+- The ```assert``` statement, used during debugging to check for conditions that ought to apply.
+
+#HSLIDE
+## Statements
+### Program Constructs
+- The ```yield``` statement, which returns a value from a generator function. From Python 2.5, yield is also an operator. This form is used to implement coroutines.
+- The ```import``` statement, which is used to import modules whose functions or variables can be used in the current program.
+- The ```print``` statement was changed to the print() function in Python 3.
 
 ### GitPitch turns <span style="color: #e49436; text-transform: none">PITCHME.md</span> into interactive, online slideshows.
 <br>
