@@ -14,7 +14,18 @@
 <span style="color:gray">GitHub, GitLab and Bitbucket</span>
 
 #HSLIDE
+## Major Language Elements
+//<span style="color: #e49436; text-transform: none">PITCHME.md</span> into interactive, online slideshows.
 
+- Hello, World!
+- Variables and Types
+- Lists
+- Basic Operators
+- String Formatting
+- Basic String Operations
+- Dictionaries, sets, and iterables
+
+#HSLIDE
 ## What is Python?
 
 - Interpreted language (JIT compilation)
@@ -34,6 +45,14 @@ print 'I "said" do not touch this.'
 ```
 
 #HSLIDE
+## Flow Control - a basic code block
+Flow control is handled by 'blocks'.  In Python, blocks are semantically derived from indents.  The standard is 4 spaces.
+
+#HSLIDE
+## Flow Control - a basic code block
+In other words, the units of program - the chunks of execution - all have the same indent level.
+
+#HSLIDE
 ## A Simple Program
 ```python
 #!/usr/bin/python
@@ -51,6 +70,37 @@ def helloWorld():
 
 helloWorld()
 ```
+
+#HSLIDE
+## A Simple Program
+```python
+#  This is a function.  We'll look at them more closely...
+#  but notice how the function definition _ends_ with the
+#  move back to the 1st Column.  This ends the function
+#  block.
+def helloWorld():
+     #  this function prints stuff
+     print "Hello World!"
+     print "Hello Again"
+     print "I like typing this."
+
+helloWorld()
+```
+
+#HSLIDE
+## A Simple Program
+```python
+def helloWorld():
+     #  this function prints stuff
+     print "Hello World!"
+     print "Hello Again"
+     print "I like typing this."
+#  with the function defined, we can call it.
+helloWorld()
+#   Because the function needs no inputs, we don't hand it any.
+#   We can see this in both the declaration and the call.
+```
+
 #HSLIDE
 ## A Simple Program
 ```python
@@ -122,7 +172,10 @@ output = helloWorld("you do you...")
 output = helloWorld(1+1)  # equivalent to helloWorld(1L+1L)
 ```
 #HSLIDE
-### Major Language Elements
+##
+
+#HSLIDE
+## Major Language Elements
 //<span style="color: #e49436; text-transform: none">PITCHME.md</span> into interactive, online slideshows.
 
 - Hello, World!
@@ -132,15 +185,6 @@ output = helloWorld(1+1)  # equivalent to helloWorld(1L+1L)
 - String Formatting
 - Basic String Operations
 - Dictionaries, sets, and iterables
-
-#HSLIDE
-### Flow Control
-- Conditions
-- Loops
-- Functions
-- Classes and Objects
-- Dictionaries
-- Modules and Packages
 
 #HSLIDE
 ### Typing
@@ -359,7 +403,14 @@ Answer?
 4
 >>>
 ```
-
+#HSLIDE
+### Flow Control
+- Conditions
+- Loops
+- Functions
+- Classes and Objects
+- Dictionaries
+- Modules and Packages
 
 
 #HSLIDE
