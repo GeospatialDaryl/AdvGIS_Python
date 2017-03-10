@@ -42,9 +42,9 @@ print 'I "said" do not touch this.'
 
 #HSLIDE
 ## Flow Control - a basic code block
-Flow control is handled by 'blocks'.
-In Python, blocks are semantically derived from indents.
-The standard is 4 spaces.
+-Flow control is handled by 'blocks'.
+-In Python, blocks are semantically derived from indents.
+-The standard is 4 spaces.
 
 #HSLIDE
 ## Flow Control - a basic code block
