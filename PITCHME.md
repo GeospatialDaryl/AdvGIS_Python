@@ -182,6 +182,166 @@ output = helloWorld(1+1)  # equivalent to helloWorld(1L+1L)
 - Dictionaries, sets, and iterables
 
 #HSLIDE
+## Lists and Iterators
+Lists are one of the most common data structures in Python.
+- Compound data type
+- make on with square brackets ```listNum = [1,2,3]``` or empty ```listE = []```
+- lists are **mutable**
+
+#HSLIDE
+## List Indexing
+Call it by it's position, 0-index.
+```python
+>>> listE = ["ABBA", 3, False]
+>>> listE[0]
+'ABBA'
+>>> listE[-1]
+False
+>>> listE[0:1]
+['abba']
+>>> listE[0:2]
+['abba', 3]
+>>>
+```
+#HSLIDE
+## List Indexing and Mutability
+```
+>>> listE[0] = "Iron Maiden"
+>>> listE
+['Iron Maiden', 3, False]
+>>>
+```
+#HSLIDE
+## ```list``` has some awesome methods!
+Remember, any list is an instance of the List class.
+Learning Python is a process of collecting memories of all these methods, and connecting them to problems.
+##  Check the Docs alot!
+
+#HSLIDE
+## Commonly Used Methods
+```python
+>>> listE.append("this String")
+>>> listE
+['Iron Maiden', 3, False, 'this String']
+>>> len(listE)
+4
+>>> #Nested list
+>>> listF = ["Oh NO!", "This is too much!", True]
+>>> listE.append(listF)
+>>> listE
+['Iron Maiden', 3, False, 'this String', ['Oh NO!', 'This is too much!', True]]
+>>>
+```
+#HSLIDE
+## More common ```list``` methods and functions
+
+
+
+#HSLIDE
+## A Simple Program - Shell mode
+```python
+>>> # Fibonacci series:
+... # the sum of two elements defines the next
+... a, b = 0, 1
+>>> while b < 10:
+...     print b
+...     a, b = b, a+b
+...
+1
+1
+2
+3
+5
+8
+```
+```print```, ```while```, multiple assignement
+
+#HSLIDE
+## Flow Control 1: ```if```
+```python
+>>> x = int(raw_input("Please enter an integer: "))
+Please enter an integer: 42
+>>> if x < 0:
+...     x = 0
+...     print 'Negative changed to zero'
+... elif x == 0:
+...     print 'Zero'
+... elif x == 1:
+...     print 'Single'
+... else:
+...     print 'More'
+...
+More
+```
+#HSLIDE
+## ```if``` Bonus Round
+```elif``` - chains of if
+```else``` - optional end to if-then chain
+
+Other languages have a ```switch``` or ```case``` logical block.
+Python uses ```if ... elif ... elif ... (else)``` structure.
+
+#HSLIDE
+## ```for```
+```for``` in Python iterates over iterable objects (containers).
+Not based on arithemic or logical conditions.
+```python
+>>> # Measure some strings:
+... words = ['cat', 'window', 'defenestrate']
+>>> for w in words:
+...     print w, len(w)
+...
+cat 3
+window 6
+defenestrate 12
+```
+#HSLIDE
+## ```range()``` function
+```range()``` generates arithmetic progressions.
+Can have 1, 2, or 3 arguments.
+1.  implicit start 0, argument is # of entries generated.
+This will **not** include the #.
+```python
+>>> range(10)
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+
+#HSLIDE
+## ```range()``` function
+2.  1st argument start, 2nd argument "stop" position.
+Python "stops" before it gets to the value.
+```python
+>>> range(5, 10)
+[5, 6, 7, 8, 9]
+```
+
+#HSLIDE
+## ```range()``` function
+3.  Start, Stop, and Step
+Like 2, but it specifies a step-size
+```python
+>>> range(0, 10, 3)
+[0, 3, 6, 9]
+>>> range(-10, -100, -30)
+[-10, -40, -70]
+```
+
+#HSLIDE
+## Putting them together...
+remember ``len()```?
+```python
+>>> a = ['Mary', 'had', 'a', 'little', 'lamb']
+>>> for i in range(len(a)):
+...     print i, a[i]
+...
+0 Mary
+1 had
+2 a
+3 little
+4 lamb
+```
+
+#HSLIDE
 ### Typing
 - Duck Typing
 - Dynamic Typing
@@ -622,6 +782,69 @@ class Dog:
 >>> e.add_trick('play dead')
 >>> d.tricks                # unexpectedly shared by all dogs
 ['roll over', 'play dead']
+```
+#HSLIDE
+## You probably wanted this...
+```python
+class Dog:
+
+    tricks = []             # mistaken use of a class variable
+
+    def __init__(self, name):
+        self.name = name
+
+    def add_trick(self, trick):
+        self.tricks.append(trick)
+
+>>> d = Dog('Fido')
+>>> e = Dog('Buddy')
+>>> d.add_trick('roll over')
+>>> e.add_trick('play dead')
+>>> d.tricks                # unexpectedly shared by all dogs
+['roll over', 'play dead']
+```
+#HSLIDE
+## Too much for now...
+File these away:
+***Class inheritance:***
+If Fido 'is a' Dog, and a Dog 'is a' Mammal, and a Mammal 'is an' Animal.
+Can we do that with classes?  Oh sure!
+
+#HSLIDE
+```python
+class Animal:
+    def __init__(self, strSpineType)
+        self.spine = strSpineType
+    def move(self, moveType):
+        self.move = "unknown"
+        print "I don't know!"
+Class Dog(Animal):
+    # here, the move method 'overrides' the base class one.
+    #Cool, huh?
+    def move(self, moveType):
+        i = 10
+        while i > 0:
+          self.move = "crawl"
+          i = i - 1
+```
+#HSLIDE
+## Name Mangling
+In a nutshell, in Java we can 'lock down' methods and attributes so they are *unavailable* outside the class.
+Python doesn't support that, we have a convention.  If something is **not** to be messed with outside of the class, use an underscore up front.
+```self._numWidgets```
+This means that 'the object manages this attribute, don't mess with it.
+
+#HSLIDE
+## The Object as a Bucket
+"Gosh Daryl, that seems complicated.  What if I just want a container to dump information into?"
+```python
+class Dog:
+    pass  #remember pass?  It allows an empty block
+
+fido = Dog()  #tell me about this dog...
+fido.fleas = False
+fido.food = "hungry"
+fido.legs = 3
 ```
 
 
