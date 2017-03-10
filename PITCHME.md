@@ -1,10 +1,6 @@
 #HSLIDE
-<!-- .slide: data-autoslide="10000" -->
-
-
 <img src="http://www.cakex.org/sites/default/files/National_Conservation_Training_Center.gif" width="200">
 <img src="https://www.python.org/static/img/python-logo.png" width="400">
-
 #### Python for Advanced GIS
 <br>
 <span style="color:gray">NCTC Advanced GIS</span>
@@ -19,13 +15,14 @@
 - Basic Operators
 - String Formatting
 - Basic String Operations
-- Dictionaries, sets, and iterables
+- Dictionaries, Sets, and Iterables
+- Modules and Reusable code
 
 #HSLIDE
 ## What is Python?
 
-- Interpreted language (JIT compilation)
-- Uses the virtual machine model
+* Interpreted language (JIT compilation)
+* Uses the virtual machine model
 The basic idea is that we have a python *process*, which sits and waits for instructions/compiled binary code (aka a virtual machine).
 
 #HSLIDE
