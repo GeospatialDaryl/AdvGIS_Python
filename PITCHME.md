@@ -502,6 +502,109 @@ Answer?
 - Dictionaries
 - Modules and Packages
 
+#HSLIDE
+##  Objects and Classes
+All Python 'things' are **instances** of an object.
+A **Class** is a blueprint for a data model.  It defines a 'thing' that has:
+- initilization (```__init__```) method
+- additional methods (functions bound to the object)
+- and attributes ("slots" that hold data, and are addressable by name.
+
+#HSLIDE
+## Classes and Objects
+When we want to make one of these, we "instantiate it",
+or "make an instance".
+
+A class can have attributes (variables) that are unique to that instance,
+or it can have variables shared by all instances of that class.
+
+#HSLIDE
+## Class & Object Nomenclature
+class 'variable'    == class attribute
+class 'function'    == class 'function'
+instance 'variable' == an object's unique attributes
+instance 'function' == an object's method, almost always common to all instances.
+
+#HSLIDE
+## Why Classes?
+Classes are blueprints, or ***data models***
+They allow us to organize code in a way that makes logical sense.
+Classes are ***awesomesauce**.
+The classic tests are 'is a' and 'has a'.
+'is a ' -->  class instance
+'has a ' --> class attribute
+
+#SLIDE
+## UML (Universal Markup Language)
+There is a standard way of drawing ('marking up') classes.
+This should be awesome, a way of using the graphic tools to model information and then generate code.
+I haven't seen it work that way yet, but probably my fault.
+
+#HSLIDE
+## UML (Universal Markup Language)
+<img src="http://agilemodeling.com/images/models/classDiagramStudentAddress.jpg">
+
+#HSLIDE
+So - the classic example.  Things that are dogs.
+
+#HSLIDE
+### The Dog Class
+```python
+class Dog:
+
+    kind = 'canine'         # class variable shared by all instances
+
+    def __init__(self, name):
+        self.name = name    # instance variable unique to each instance
+```
+#HSLIDE
+## The ```__init__``` method:
+```python
+class Dog:
+
+    kind = 'canine'         # class variable shared by all instances
+
+    def __init__(self, name):
+        self.name = name    # instance variable unique to each instance
+```
+- Always called when an object is instantiated
+- Always has *at least one* argument (***self***)
+- Is how we pass arguments into the creation of the class.
+
+#HSLIDE
+## The ```__init__``` method:
+***Import concept:***
+Defining what you need for ```__init__``` is a critical part of the data modeling.
+Think carefully.
+
+#HSLIDE
+```python
+class Dog:
+    kind = 'canine'         # class variable shared by all instances
+    def __init__(self, name):
+        self.name = name    # instance variable unique to each instance
+
+>>> d = Dog('Fido')
+>>> e = Dog('Buddy')
+```
+#HSLIDE
+So now we have two instances of the Dog Class.
+One called (name-bound) to ```d```, the other to ```e```.
+
+#HSLIDE
+# Class Variables vs. Instance Variables
+```python
+>>> d.kind                  # shared by all dogs
+'canine'
+>>> e.kind                  # shared by all dogs
+'canine'
+>>> d.name                  # unique to d
+'Fido'
+>>> e.name                  # unique to e
+'Buddy'
+```
+
+
 
 #HSLIDE
 <!-- .slide: data-autoslide="2000" -->
@@ -531,63 +634,8 @@ In addition to the esri help which describes all of the parameters of a function
 ### ArcPy is not vanilla python...
 
 
-<span style="color: #e49436">STEP 1. PITCHME.md</span>
-
-![MARKDOWN](https://d1z75bzl1vljy2.cloudfront.net/hello-world/markdown.png)
-
-Create GitPitch slideshow content using GitHub flavored Markdown in your favorite editor.
-
-#HSLIDE
-
-<span style="color: #e49436">STEP 2. GIT-COMMIT</span>
-
-![TERMINAL](https://d1z75bzl1vljy2.cloudfront.net/hello-world/terminal.png)
-
-Git-commit on any branch and push your PITCHME.md to GitHub, GitLab or Bitbucket.
-
-#HSLIDE
-
-<span style="color: #e49436">STEP 3. GET THE WORD OUT!</span>
-
-<br>
-
-<span style="font-size: 1.3em;"><span style="color:white">htt</span><span style="color:white">ps://git</span><span style="color: #e49436">pitch</span><span style="color: white">.com/<span style="color: #e49436">user</span>/<span style="color: #e49436">repo</span>/<span style="color: #e49436">branch</span></span>
-
-<br>
-
-Instantly use your GitPitch slideshow URL to promote, pitch or present absolutely anything.
-
-#HSLIDE
-<!-- .slide: data-autoslide="11000" -->
-
-<span style="color: #e49436">GIT</span>PITCH DESIGNED FOR SHARING
-
-![SOCIAL](https://d1z75bzl1vljy2.cloudfront.net/hello-world/gp-social.jpg)
-
-- View any slideshow at its public URL
-- Promote any slideshow using a GitHub badge
-- Embed any slideshow within a blog or website
-- Share any slideshow on Twitter, LinkedIn, etc
-- Print any slideshow as a PDF document
-- Download and present any slideshow offline
-
-#HSLIDE
-<!-- .slide: data-autoslide="12000" -->
-
-<span style="color: #e49436">GIT</span>PITCH FEATURE RICH SLIDESHOWS
-
-- GitHub Flavored Markdown +
-- Code Block and GIST Slides
-- Image and Video Slides
-- Custom Logos and Backgrounds
-- Multiple Themes And More
-- <span style="color: #e49436">Plus...</span>
-- Your Slideshow Is Part Of Your Project
-- Under Git Version Control Within Your Git Repo
 
 
 #HSLIDE
-<!-- .slide: data-autoslide="8000" -->
-
 ### Go for it.
 ### Just add <span style="color: #e49436; text-transform: none">PITCHME.md</span> ;)
