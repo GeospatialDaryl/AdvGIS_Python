@@ -42,7 +42,9 @@ print 'I "said" do not touch this.'
 
 #HSLIDE
 ## Flow Control - a basic code block
-Flow control is handled by 'blocks'.  In Python, blocks are semantically derived from indents.  The standard is 4 spaces.
+Flow control is handled by 'blocks'.
+In Python, blocks are semantically derived from indents.
+The standard is 4 spaces.
 
 #HSLIDE
 ## Flow Control - a basic code block
@@ -342,6 +344,25 @@ remember ``len()```?
 ```
 
 #HSLIDE
+## ```break``` and ```continue```
+```break``` steps out 1 logical block from the enclosing ```for`` or ```while``` loop.
+```python
+>>> for n in range(2, 10):
+...     for x in range(2, n):
+...         if n % x == 0:
+...             print n, 'equals', x, '*', n/x
+...             break
+...     else:
+...         # loop fell through without finding a factor
+...         print n, 'is a prime number'
+...
+2 is a prime number
+3 is a prime number
+4 equals 2 * 2
+5 is a prime number
+```
+
+#HSLIDE
 ### Typing
 - Duck Typing
 - Dynamic Typing
@@ -352,7 +373,7 @@ Type error = Crash (an Exception)
 
 This is not "static typing" - we can change the type of a variable by re-referencing it, and the compiler doesn not check ahead of time.
 
-The term 'duck typing' is now used to describe the dynamic typing paradigm used by the languages in this group. (wikipedia)
+The term 'duck typing' is now used to describe the dynamic typing paradigm used by the languages in this group.
 
 #HSLIDE
 ### Typing
