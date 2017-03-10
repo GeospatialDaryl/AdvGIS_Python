@@ -42,9 +42,9 @@ print 'I "said" do not touch this.'
 
 #HSLIDE
 ## Flow Control - a basic code block
--Flow control is handled by 'blocks'.
--In Python, blocks are semantically derived from indents.
--The standard is 4 spaces.
+- Flow control is handled by 'blocks'.
+- In Python, blocks are semantically derived from indents.
+- The standard is 4 spaces.
 
 #HSLIDE
 ## Flow Control - a basic code block
@@ -175,28 +175,28 @@ output = helloWorld(1+1)  # equivalent to helloWorld(1L+1L)
 #HSLIDE
 ## Major Language Elements
 
-- Hello, World!
-- Variables and Types
-- Lists
-- Basic Operators
-- String Formatting
-- Basic String Operations
-- Dictionaries, sets, and iterables
+* Hello, World!
+* Variables and Types
+* Lists
+* Basic Operators
+* String Formatting
+* Basic String Operations
+* Dictionaries, sets, and iterables
 
 #HSLIDE
 ## Lists and Iterators
 Lists are one of the most common data structures in Python.
-- Compound data type
-- make on with square brackets ```listNum = [1,2,3]``` or empty ```listE = []```
-- lists are **mutable**
+* Compound data type
+* make on with square brackets ```listNum = [1,2,3]``` or empty ```listE = []```
+* lists are **mutable**
 
 #HSLIDE
 ## List Indexing
 Call it by it's position, 0-index.
 ```python
->>> listE = ["ABBA", 3, False]
+>>> listE = ["abba", 3, False]
 >>> listE[0]
-'ABBA'
+'abba'
 >>> listE[-1]
 False
 >>> listE[0:1]
