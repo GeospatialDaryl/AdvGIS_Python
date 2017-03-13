@@ -1,9 +1,10 @@
 # CSP7300  GIS Advanced
 # National Conservation Training Center
-# 3/12:17/2017
+# 3/[12:17]/2017
 
 ## Day One:
 ### 3/12/2017
+
 0.  GitHub, the Social Contract, and Exo-biotic Evolution
 - Finding Other People's stuff
 - Re-use your own darn code!
@@ -19,6 +20,7 @@
 
 ## Day Two:
 ### 3/13/2017
+
 1.  Intro to Python Pt 2
 - Strings and String Methods pt. 2
 -
