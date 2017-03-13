@@ -483,10 +483,15 @@ income = (gross_wages
 ### Style - PEP-8
 I like to use 'variable names' like this in my code:
 `type` `+` `Name`
+
 `listFC`
+
 `intNumFeat`
+
 `boolTestLoop`
+
 `objLASFile`
+
 etc...
 This convention does nothing real - but I find it very helpful.
 In fact, serious Python will not use it.  Why?

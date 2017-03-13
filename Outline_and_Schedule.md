@@ -4,6 +4,10 @@
 
 ## Day One:
 ### 3/12/2017
+0.  GitHub, the Social Contract, and Exo-biotic Evolution
+- Finding Other People's stuff
+- Re-use your own darn code!
+
 1.  Intro to Python Pt 1
 - The Hello World Jam
 - Functions
