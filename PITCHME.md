@@ -253,10 +253,10 @@ Learning Python is a process of collecting memories of all these methods, and co
 5
 8
 ```
-```print```, ```while```, multiple assignement
+`print`, `while`, multiple assignement
 
 #HSLIDE
-## Flow Control 1: ```if```
+## Flow Control 1: `if`
 ```python
 >>> x = int(raw_input("Please enter an integer: "))
 Please enter an integer: 42
@@ -273,16 +273,16 @@ Please enter an integer: 42
 More
 ```
 #HSLIDE
-## ```if``` Bonus Round
-```elif``` - chains of if
-```else``` - optional end to if-then chain
+## `if` Bonus Round
+`elif` - chains of if
+`else` - optional end to if-then chain
 
-Other languages have a ```switch``` or ```case``` logical block.
-Python uses ```if ... elif ... elif ... (else)``` structure.
+Other languages have a `switch` or `case` logical block.
+Python uses `if ... elif ... elif ... (else)` structure.
 
 #HSLIDE
-## ```for```
-```for``` in Python iterates over iterable objects (containers).
+## `for`
+`for` in Python iterates over iterable objects (containers).
 Not based on arithemic or logical conditions.
 ```python
 >>> # Measure some strings:
@@ -424,11 +424,11 @@ Especially as you move between languages frequently.
 ### Assignment
 OK - what happens?
 
-```x = 2; y = 2; z = 2```
+`x = 2; y = 2; z = 2`
 
 #HSLIDE
 ### Assignment
-```x = 2; y = 2; z = 2```
+`x = 2; y = 2; z = 2`
 three names and one numeric object,
 to which all three names are bound.
 
