@@ -11,6 +11,7 @@
   + Your project - pick something simple to iterate on
 
 1.  Intro to Python Pt 1
+  + `which` Python, shells, and intepreters
   + The Hello World Jam
   + Functions
   + Lists
