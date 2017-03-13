@@ -23,8 +23,8 @@
 ### 3/13/2017
 
 1.  Intro to Python Pt 2
-- Strings and String Methods pt. 2
--
+  + Strings and String Methods pt. 2
+  + TBD...
 
 2.  Exercise 2
 
