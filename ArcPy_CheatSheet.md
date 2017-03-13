@@ -10,8 +10,8 @@ Try to open the python interface.
 Note how when you drag a Feature Class object from the Table of Contents (dragging a Layer object) to the interface, you are creating a character string.  The FC gets it's name automatically wrapped in quotes, and we can refer to that object (the Layer object) by that name.
 
 This is an important sublety, because there is a difference between:
-```pointCritters``` <-- this is a object on it's own, it can be addressed using the dot-methods and dot-attributes
-```'pointCritters'``` <--- this is a String.  It can be sliced, or used to address the layer object inside of the ArcMap ArcPy interface.
+`pointCritters` <-- this is a object on it's own, it can be addressed using the dot-methods and dot-attributes
+`'pointCritters'` <--- this is a String.  It can be sliced, or used to address the layer object inside of the ArcMap ArcPy interface.
 
 In a stand-alone script, this won't work the same way.  
 
