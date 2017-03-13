@@ -295,8 +295,8 @@ window 6
 defenestrate 12
 ```
 #HSLIDE
-## ```range()``` function
-```range()``` generates arithmetic progressions.
+## `range()` function
+`range()` generates arithmetic progressions.
 Can have 1, 2, or 3 arguments.
 1.  implicit start 0, argument is # of entries generated.
 This will **not** include the #.
@@ -306,7 +306,7 @@ This will **not** include the #.
 ```
 
 #HSLIDE
-## ```range()``` function
+## `range()` function
 2.  1st argument start, 2nd argument "stop" position.
 Python "stops" before it gets to the value.
 ```python
@@ -315,7 +315,7 @@ Python "stops" before it gets to the value.
 ```
 
 #HSLIDE
-## ```range()``` function
+## `range()` function
 3.  Start, Stop, and Step
 Like 2, but it specifies a step-size
 ```python
@@ -327,7 +327,7 @@ Like 2, but it specifies a step-size
 
 #HSLIDE
 ## Putting them together...
-remember ``len()```?
+remember `len()`?
 ```python
 >>> a = ['Mary', 'had', 'a', 'little', 'lamb']
 >>> for i in range(len(a)):
@@ -341,8 +341,8 @@ remember ``len()```?
 ```
 
 #HSLIDE
-## ```break``` and ```continue```
-```break``` steps out 1 logical block from the enclosing ```for`` or ```while``` loop.
+## `break` and `continue`
+`break` steps out 1 logical block from the enclosing `for` or `while` loop.
 ```python
 >>> for n in range(2, 10):
 ...     for x in range(2, n):
@@ -377,8 +377,8 @@ The term 'duck typing' is now used to describe the dynamic typing paradigm used 
 So what does this mean?  Python very much cares that the type of the object matches the requirements of the function/method.
 
 - String concatenation:
-We want to append the value of the field to an intro string (```"The temperature is :"``` and ```valTemp```).
-Using the string concatenation operator (```+```) on this example will throw a run-time error.
+We want to append the value of the field to an intro string (`"The temperature is :"` and `valTemp`).
+Using the string concatenation operator (`+`) on this example will throw a run-time error.
 You need to explicity convert the type for this to work.  ( `str(valTemp)` )
 
 #HSLIDE
@@ -389,7 +389,7 @@ Especially as you move between languages frequently.
 
 #HSLIDE
 ## Statements
-### Assignment ```=```
+### Assignment `=`
 - We recall:
 1.  All python things are objects.
 2.  All objects have classes - that is, **they are an instance of a class.**
@@ -482,13 +482,14 @@ income = (gross_wages
 #HSLIDE
 ### Style - PEP-8
 I like to use 'variable names' like this in my code:
-*type*Name
-```listFC```
-```intNumFeat``
-```boolTestLoop``
-```objLASFile```
+`type` `+` `Name`
+`listFC`
+`intNumFeat`
+`boolTestLoop`
+`objLASFile`
 etc...
-This convention ***does nothing real** - but I find it very helpful.
+This convention does nothing real - but I find it very helpful.
+In fact, serious Python will not use it.  Why?
 
 
 #HSLIDE
@@ -506,16 +507,16 @@ This convention ***does nothing real** - but I find it very helpful.
 #HSLIDE
 ## Statements
 ### Program Constructs
-- The ```class``` statement, which executes a block of code and attaches its local namespace to a class, for use in object-oriented programming.
-- The ```def``` statement, which defines a function or method.
-- The ```assert``` statement, used during debugging to check for conditions that ought to apply.
+- The `class` statement, which executes a block of code and attaches its local namespace to a class, for use in object-oriented programming.
+- The `def` statement, which defines a function or method.
+- The `assert` statement, used during debugging to check for conditions that ought to apply.
 
 #HSLIDE
 ## Statements
 ### Program Constructs
-- The ```yield``` statement, which returns a value from a generator function. From Python 2.5, yield is also an operator. This form is used to implement coroutines.
-- The ```import``` statement, which is used to import modules whose functions or variables can be used in the current program.
-- The ```print``` statement was changed to the print() function in Python 3.
+- The `yield` statement, which returns a value from a generator function. From Python 2.5, yield is also an operator. This form is used to implement coroutines.
+- The `import` statement, which is used to import modules whose functions or variables can be used in the current program.
+- The `print` statement was changed to the print() function in Python 3.
 
 ### GitPitch turns <span style="color: #e49436; text-transform: none">PITCHME.md</span> into interactive, online slideshows.
 <br>
@@ -707,7 +708,7 @@ instance 'function' == an object's method, almost always common to all instances
 ## Why Classes?
 Classes are blueprints, or ***data models***
 They allow us to organize code in a way that makes logical sense.
-Classes are ***awesomesauce**.
+Classes are ***awesomesauce***.
 The classic tests are 'is a' and 'has a'.
 'is a ' -->  class instance
 'has a ' --> class attribute
@@ -849,7 +850,7 @@ Class Dog(Animal):
 ## Name Mangling
 In a nutshell, in Java we can 'lock down' methods and attributes so they are *unavailable* outside the class.
 Python doesn't support that, we have a convention.  If something is **not** to be messed with outside of the class, use an underscore up front.
-```self._numWidgets```
+`self._numWidgets`
 This means that 'the object manages this attribute, don't mess with it.
 
 #HSLIDE
@@ -888,12 +889,6 @@ In addition to the esri help which describes all of the parameters of a function
 
 #HSLIDE
 ### ArcPy is not vanilla python...
-
-
-#HSLIDE
-### ArcPy is not vanilla python...
-
-
 
 
 #HSLIDE
